@@ -1,0 +1,218 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #949090;
+  color: white;
+}
+
+.log, .name, .login, .select {
+  display: flex;
+  align-items: center;
+}
+
+select .newgroup {
+  padding: 10px;
+}
+
+/* Theme Toggle */
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+nav.dark-mode {
+  background-color: #000;
+  color: white;
+}
+
+/* Responsive Nav Menu */
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.select {
+  display: flex;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .select {
+      display: none;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  nav .login {
+      display: none;
+  }
+
+  .menu-expanded .select {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+/* Chat Log */
+#chat-log {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  margin: 20px 0;
+}
+
+body.dark-mode #chat-log {
+  background-color: #444;
+  color: white;
+  border-color: #333;
+}
+
+/* Message Form */
+#message-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+#message-form input {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#message-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#message-form button:hover {
+  background-color: #45a049;
+}
+
+/* Dark mode styles for the message form */
+body.dark-mode #message-form input {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+
+body.dark-mode #message-form button {
+  background-color: #2196F3;
+}
+
+/* Form elements - general styles */
+#join-form {
+  margin: 20px 0;
+}
+
+#join-form label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#join-form input {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+}
+
+#join-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#join-form button:hover {
+  background-color: #45a049;
+}

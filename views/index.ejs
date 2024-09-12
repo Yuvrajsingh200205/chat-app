@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Room</title>
+  <link rel="stylesheet" href="/styles/stylechat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <div class="log">
+      <a href="#"><i class="fa-solid fa-comments-dollar"></i></a>
+    </div>
+    <div class="name">
+      <a href="#">Let's Chat</a>
+    </div>
+    <div class="theme-toggle-wrapper">
+      <label class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <button type="button" onclick="cameraOff()" id="button"> 
+      <i class="fas fa-video fa-2x cam-btn"></i> 
+    </button>
+
+    <!-- Menu button for small screens -->
+    <button class="menu-toggle" aria-label="Toggle Menu"><i class="fa fa-bars"></i></button>
+
+    <!-- Select options that shrink into a button on smaller screens -->
+    <div class="select">
+      <div class="newgroup"><a href="#">New Group</a></div>
+      <div class="newgroup"><a href="#">New Broadcast</a></div>
+      <div class="newgroup"><a href="#">Linked Device</a></div>
+      <div class="newgroup"><a href="#">Settings</a></div>
+    </div>
+
+    <div class="login">
+      <div class="signup"><a href="http://localhost:9999/login">Login</a></div>
+      <div class="signup"><a href="http://localhost:9999/signup">Signup</a></div>
+    </div>
+  </nav>
+
+  <!-- Join Form -->
+  <form id="join-form">
+    <label for="username">Username</label>
+    <input type="text" id="username" required>
+    <button id="join">Join</button>
+  </form>
+
+  <!-- Chat Log -->
+  <div id="chat-log"></div>
+
+  <!-- Message Form -->
+  <form id="message-form" style="display:none;">
+    <input type="text" id="message" placeholder="Type a message..." required>
+    <button id="send">Send</button>
+  </form>
+  
+  <!-- <script src="/scriptchat.js"></script> -->
+  <script src="/index.js"></script>
+  
+</body>
+</html>
